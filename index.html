@@ -36,50 +36,41 @@
     <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
         <div class="container">
-
-           
-
             <!-- Text Logo - Use this if you don't have a graphic logo -->
             <!-- <a class="navbar-brand logo-text" href="index.html">Desi</a> -->
-
-            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+    
+            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarsExampleDefault">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
+    
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ms-auto navbar-nav-scroll">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#header" tabindex="1">Inicio</a>
+                        <a class="nav-link active" href="#header" tabindex="1" aria-label="Ir a la sección de Inicio">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#galeria" tabindex="2">Galería de imágenes</a>
+                        <a class="nav-link" href="#galeria" tabindex="2" aria-label="Ir a la Galería de imágenes">Galería de imágenes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#tabla" tabindex="3">Tablas accesibles</a>
+                        <a class="nav-link" href="#tabla" tabindex="3" aria-label="Ir a la sección de Tablas accesibles">Tablas accesibles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact" tabindex="4">Formulario</a>
+                        <a class="nav-link" href="#contact" tabindex="4" aria-label="Ir a la sección de Formulario">Formulario</a>
                     </li>
                 </ul>
-                <span class="nav-item social-icons">
-                    <span class="fa-stack">
-                        <a href="#your-link">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-facebook-f fa-stack-1x"></i>
-                        </a>
-                    </span>
-                    <span class="fa-stack">
-                        <a href="#your-link">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-twitter fa-stack-1x"></i>
-                        </a>
-                    </span>
-                </span>
+                
+                <div class="nav-item social-icons">
+                    <a href="#your-facebook-link" class="social-icon" aria-label="Enlace a Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#your-twitter-link" class="social-icon" aria-label="Enlace a Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
             </div> <!-- end of navbar-collapse -->
         </div> <!-- end of container -->
     </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
-
+    
       
 <!-- Encabezado -->
 <header id="header" class="header">
@@ -88,7 +79,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="video-container">
-                        <video width="1100" height="800" autoplay preload="auto" controls id="header-video" tabindex="5" aria-label="Video de presentación, pulsa enter para reproducir">
+                        <video width="1100" height="800" autoplay preload="auto" controls id="header-video" tabindex="5" aria-label="Video de presentación con subtítulos, pulsa enter para reproducir">
+                            <track kind="captions" label="Español" src="ruta/subtitulos.vtt" srclang="es" default>
                             <source src="./assets/talking-avatar_qnAFK4YC.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -102,7 +94,7 @@
     </div> <!-- Fin del contenido del encabezado -->
 
     <!-- Fondo de Video -->
-    <div class="video-background-container" tabindex="0">
+    <div class="video-background-container" tabindex="7">
         <video autoplay loop muted id="video-background" poster="images/header-background.jpg" playsinline>
             <source src="images/header-background-video.mp4" type="video/mp4" />
         </video>
@@ -116,53 +108,51 @@
 
 
     <!-- GALERIA 1 -->
-	<div id="galeria" class="filter bg-gray">
-		<div class="container">
+    <div id="galeria" class="filter bg-gray" aria-labelledby="galeria-heading">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="h2-heading">1: Percepcion de imágenes</h2>
-                    <p tabindex="7"><strong>Esta primera experiencia consiste en que puedas navegar por nuestra galeria de imagenes, 
-                        y elijas, cual de ellas es tu fotografía favorita. Mas tarde `reguntaré por tus gustos.
-                    </strong></p>
+                    <h2 id="galeria-heading">1: Percepción de imágenes</h2>
+                    <p tabindex="8"><strong>Esta primera experiencia consiste en que puedas navegar por nuestra galería de imágenes y elijas cuál de ellas es tu fotografía favorita. Más tarde preguntaremos por tus gustos.</strong></p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12">
-                    
                     <!-- Filter -->
+                    <p>Selecciona una categoría:</p>
                     <div class="button-group filters-button-group">
-                        <button class="button is-checked" data-filter="*">VER TODAS</button>
-                        <button class="button" data-filter=".daltonismo">DALTONISMO</button>
-                        <button class="button" data-filter=".auditivas">DIFICULTADES AUDITIVAS</button>
-                        <button class="button" data-filter=".neurologicas">DIFICULTADES NEUROLOGICAS Y MOTRICES</button>
+                        <button class="button is-checked" data-filter="*" tabindex="9"><span>Todas</span></button>
+                        <button class="button" data-filter=".daltonismo" tabindex="10"><span>DALTONISMO</span></button>
+                        <button class="button" data-filter=".auditivas" tabindex="11"><span>DIFICULTADES AUDITIVAS</span></button>
+                        <button class="button" data-filter=".neurologicas" tabindex="12"><span>DIFICULTADES NEUROLOGICAS Y MOTRICES</span></button>
                     </div> <!-- end of button group -->
-                    <div class="grid">
+                    <div class="grid" aria-live="polite">
                         <div class="element-item daltonismo">
-                            <img class="img-fluid" src="images/daltonismo.jpg" alt="Imagen de daltonismo colores" tabindex="8">
-                        </div>
-                        <div class="element-item daltonismo">
-                            <img class="img-fluid" src="images/diferencia_colores_daltonismo.jpg" alt="Imagen de diferencia de colores daltonismo" tabindex="9">
+                            <img class="img-fluid" src="images/daltonismo.jpg" alt="Imagen de daltonismo colores" tabindex="13">
                         </div>
                         <div class="element-item daltonismo">
-                            <img class="img-fluid" src="images/ejemplo_vision_daltonismo.jpg" alt="Imagen de ejemplo de vision daltonismo" tabindex="10">
+                            <img class="img-fluid" src="images/diferencia_colores_daltonismo.jpg" alt="Imagen de diferencia de colores daltonismo" tabindex="14">
+                        </div>
+                        <div class="element-item daltonismo">
+                            <img class="img-fluid" src="images/ejemplo_vision_daltonismo.jpg" alt="Imagen de ejemplo de vision daltonismo" tabindex="15">
                         </div>
                         <div class="element-item business auditivas">
-                            <img class="img-fluid" src="images/dificultades_auditivas.jpg" alt="Imagen de persona con dificultades auditivas" tabindex="11">
+                            <img class="img-fluid" src="images/dificultades_auditivas.jpg" alt="Imagen de persona con dificultades auditivas" tabindex="16">
                         </div>
                         <div class="element-item business auditivas">
-                            <img class="img-fluid" src="images/persona_problemas_auditivos.jpg" alt="Imagen de persona con problemas auditivos" tabindex="12">
+                            <img class="img-fluid" src="images/persona_problemas_auditivos.jpg" alt="Imagen de persona con problemas auditivos" tabindex="17">
                         </div>
                         <div class="element-item business auditivas">
-                            <img class="img-fluid" src="images/persona_con_problemas_auditivos.jpg" alt="Imagen de persona que posee dificultades auditivas" tabindex="13">
+                            <img class="img-fluid" src="images/persona_con_problemas_auditivos.jpg" alt="Imagen de persona que posee dificultades auditivas" tabindex="18">
                         </div>
                         <div class="element-item business neurologicas">
-                            <img class="img-fluid" src="images/dificultades_neurologicas.jpg" alt="Imagen de dificutades neurologicas" tabindex="14">
+                            <img class="img-fluid" src="images/dificultades_neurologicas.jpg" alt="Imagen de dificutades neurologicas" tabindex="19">
                         </div>
                         <div class="element-item business neurologicas">
-                            <img class="img-fluid" src="images/neurologicas.jpg" alt="Imagen de neurologico" tabindex="15">                           
+                            <img class="img-fluid" src="images/neurologicas.jpg" alt="Imagen de neurologico" tabindex="20">                           
                         </div>
                         <div class="element-item business neurologicas">
-                            <img class="img-fluid" src="images/persona_con_dificultades_motrices_neurologicas.jpg" alt="Imagen de perosna con dificultades motrices y neurologicas" tabindex="16">                     
+                            <img class="img-fluid" src="images/persona_con_dificultades_motrices_neurologicas.jpg" alt="Imagen de perosna con dificultades motrices y neurologicas" tabindex="21">                     
                         </div>
                     </div> <!-- end of grid -->
                     <!-- end of filter -->
@@ -177,10 +167,10 @@
     
     <div class="slider-1" id="tabla">
         <div class="col-lg-12 text-center">
-            <h2 class="h2-heading" abindex="17">2: Acceso a la información</h2>
+            <h2 class="h2-heading" tabindex="22">2: Acceso a la información</h2>
             <div class="col-lg-12">
                 <div class="mx-auto" style="max-width: 56%;">
-                    <div tabindex="18" class="paragraph-table"><strong>Todos tenemos derecho a la información. Pero la información, cada vez más, está en un formato digital.
+                    <div tabindex="23" class="paragraph-table"><strong>Todos tenemos derecho a la información. Pero la información, cada vez más, está en un formato digital.
                             Que el acceso a la misma sea fácil para todo el mundo es solo una cuestión de voluntad y a veces también de dinero.
                             En esta prueba, te presento una tabla de datos que indican el coste de accesibilidad de una web.
                             Más tarde, me interesaré sobre tu opinión. ¿Crees que las cifras son asequibles?.</strong>
@@ -191,29 +181,29 @@
         <div class="d-flex justify-content-center">
             <!-- Aplicación de clases de Bootstrap a la tabla -->
             <div class="table-responsive">
-                <table class="table table-striped table-bordered p-0">
+                <table class="table table-striped table-bordered p-0" tabindex="24">
                     <thead class="text-center">
                         <tr>
-                            <th id="plan" scope="col">Plan</th>
-                            <th id="descripcion" scope="col">Descripción</th>
-                            <th id="precio" scope="col">Precio</th>
+                            <th id="plan" scope="col" tabindex="25">Plan</th>
+                            <th id="descripcion" scope="col" tabindex="26">Descripción</th>
+                            <th id="precio" scope="col" tabindex="27">Precio</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th class="text-center" scope="row" tabindex="18">Básico</th>
-                            <td class="text-center" scope="descripcion" tabindex="19">Diseño de página web básica con hasta 5 páginas, estructura HTML semántica para mejorar la accesibilidad, <br> etiquetas alt para imágenes, y contraste adecuado de colores.</td>
+                            <th class="text-center" scope="row" tabindex="28">Básico</th>
+                            <td class="text-center" scope="descripcion" tabindex="29">Diseño de página web básica con hasta 5 páginas, estructura HTML semántica para mejorar la accesibilidad, <br> etiquetas alt para imágenes, y contraste adecuado de colores.</td>
                             <td class="text-center" scope="precio" tabindex="20">500€</td>
                         </tr>
                         <tr>
-                            <th class="text-center" scope="row" tabindex="21">Estándar</th>
-                            <td class="text-center" scope="descripcion" tabindex="22">Diseño web con características adicionales como integración de herramientas de lectura de pantalla, <br> teclado y navegación por voz, cumplimiento de estándares WCAG, y optimización para dispositivos móviles.</td>
-                            <td class="text-center" scope="precio" tabindex="23">900€</td>
+                            <th class="text-center" scope="row" tabindex="30">Estándar</th>
+                            <td class="text-center" scope="descripcion" tabindex="31">Diseño web con características adicionales como integración de herramientas de lectura de pantalla, <br> teclado y navegación por voz, cumplimiento de estándares WCAG, y optimización para dispositivos móviles.</td>
+                            <td class="text-center" scope="precio" tabindex="32">900€</td>
                         </tr>
                         <tr>
-                            <th class="text-center" scope="row" tabindex="24">Avanzado</th>
-                            <td class="text-center" scope="descripcion" tabindex="25">Diseño web avanzado con enfoque en la accesibilidad, incluyendo pruebas de usabilidad con usuarios con discapacidad, <br> implementación de ARIA roles y atributos, y garantía de compatibilidad con diversas tecnologías de asistencia.</td>
-                            <td class="text-center" scope="precio" tabindex="26">1500€</td>
+                            <th class="text-center" scope="row" tabindex="33">Avanzado</th>
+                            <td class="text-center" scope="descripcion" tabindex="34">Diseño web avanzado con enfoque en la accesibilidad, incluyendo pruebas de usabilidad con usuarios con discapacidad, <br> implementación de ARIA roles y atributos, y garantía de compatibilidad con diversas tecnologías de asistencia.</td>
+                            <td class="text-center" scope="precio" tabindex="35">1500€</td>
                         </tr>
                     </tbody><!-- Contenido de la tabla -->
                 </table>
@@ -233,7 +223,7 @@
                     <h2 style="color: rgb(9, 9, 9); margin-bottom: 60px;">3: Envío de información</h2>
                     <div class="col-lg-12">
                         <div class="mx-auto" style="max-width: 100%;">
-                            <div tabindex="18" class="paragraph-table"><strong>Ésta es mi ultima prueba, quiero que puedas comunicarte conmigo a través de este formulario.
+                            <div tabindex="36" class="paragraph-table"><strong>Ésta es mi ultima prueba, quiero que puedas comunicarte conmigo a través de este formulario.
                                 Espero que lo encuentres una tarea sencilla y que hayas disfrutado de la experiencia.
                             </strong>
                             </div>
@@ -241,125 +231,125 @@
                     </div>
                     <!-- Contact Form -->
                     <form class="formulario">
-                        <fieldset>
+                        <fieldset aria-labelledby="personal-info" role="group">
+                            <legend id="personal-info" tabindex="37">Información Personal</legend>
+                        
                             <div class="form-group">
-                                <input type="text" class="form-control-input" name="nombre" id="nombre" placeholder="Nombre" tabindex="1" required>
+                                <label for="nombre" class="form-control-input" tabindex="38" aria-label="Nombre" required>NOMBRE</label><br><br>
+                                <input type="text" class="form-control-input" name="nombre" id="nombre" placeholder="Escribe tu nombre aquí" tabindex="39" required aria-describedby="nombre-desc">
+                                <div id="nombre-desc" class="visually-hidden" tabindex="40">Por favor, ingresa tu nombre.</div>
                             </div>
+                        
                             <div class="form-group">
-                                <input type="email" class="form-control-input" placeholder="Correo electrónico" tabindex="2" required>
+                                <label for="email" class="form-control-input" tabindex="41" aria-label="Email" required>EMAIL</label><br><br>
+                                <input type="email" class="form-control-input" name="email" id="email" placeholder="Escribe tu email aquí" tabindex="42" required aria-describedby="email-desc">
+                                <div id="email-desc" class="visually-hidden" tabindex="43">Por favor, ingresa tu dirección de correo electrónico.</div>
                             </div>
                         </fieldset>
-                        <fieldset>
-                            <div class="form-group">
-                                <label  class="form-control-input"  placeholder="Tipo de discapacidad" tabindex="1" required> Tipo de discapacidad</label>
-                                <div class="form-group">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox"  name="visual" id="visual" tabindex="3">
-                                        <label class="form-check-label" for="visual">Visual</label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox"  name="auditiva" id="auditiva">
-                                        <label class="form-check-label" for="auditiva">Auditiva</label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox"  name="motriz" id="motriz">
-                                        <label class="form-check-label" for="motriz">Motriz</label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox"  name="cognitiva" id="cognitiva">
-                                        <label class="form-check-label" for="cognitiva">Cognitiva</label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox"  name="otra" id="otra">
-                                        <label class="form-check-label" for="otra">Otra</label>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </fieldset>
-                        <fieldset>
-                            <div class="form-group">
-                                <label  class="form-control-input"  placeholder="Tipo de discapacidad" tabindex="1" required> ¿Cómo calificaría su experiencia de navegación?</label>
-                            </div>
+                        
+                        <fieldset aria-labelledby="disability-type" role="group">
+                            <legend id="disability-type" tabindex="44">Tipo de Discapacidad</legend>
+                        
                             <div class="form-group">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio"  name="dificultad" id="dificultad" tabindex="4">
-                                    <label class="form-check-label" for="dificultad">Muy fácil</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio"  name="dificultad" id="dificultad">
-                                    <label class="form-check-label" for="dificultad">Fácil</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio"  name="dificultad" id="dificultad">
-                                    <label class="form-check-label" for="dificultad">Moderada</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio"  name="dificultad" id="dificultad">
-                                    <label class="form-check-label" for="dificultad">Difícil</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio"  name="dificultad" id="dificultad">
-                                    <label class="form-check-label" for="dificultad">Muy difícil</label>
+                                    <label for="disability-type" class="form-control-input" tabindex="45" aria-label="Tipo de Discapacidad" required> TIPO DE DISCAPACIDAD</label>
+                        
+                                    <label class="form-control-input" tabindex="46" required>
+                                        <input class="form-check-input" type="radio" value="facil" name="dificultad" id="Auditiva" tabindex="47">Auditiva
+                                    </label>
+                        
+                                    <label class="form-control-input" tabindex="48" required>
+                                        <input class="form-check-input" type="radio" value="media" name="dificultad" id="Visual" tabindex="49">Visual
+                                    </label>
+                        
+                                    <label class="form-control-input" tabindex="50" required>
+                                        <input class="form-check-input" type="radio" value="normal" name="dificultad" id="Motriz" tabindex="51">Motriz
+                                    </label>
+                        
+                                    <label class="form-control-input" tabindex="52" required>
+                                        <input class="form-check-input" type="radio" value="dificil" name="dificultad" id="Cognitiva" tabindex="53">Cognitiva
+                                    </label>
+                        
+                                    <label class="form-control-input" tabindex="54" required>
+                                        <input class="form-check-input" type="radio" value="muydificil" name="dificultad" id="Otra" tabindex="55">Otra
+                                    </label>
                                 </div>
                             </div>
                         </fieldset>
-                        <fieldset>
-                            <div class="form-group">
-                                ¿Encontró alguna barrera para acceder a contenido específico? Si es así, escriba su respuesta.
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control-input" placeholder="Escriba su respuesta" tabindex="6">
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <div class="form-group">
-                                ¿Utilizó alguna tecnología de asistencia mientras navegaba por el sitio web? 
-                                (por ejemplo, lectores de pantalla, teclados especiales, software de aumento de pantalla, etc.)
-                            </div>
+                        
+
+                        <fieldset aria-labelledby="navigation-experience" role="group">
+                            <legend id="navigation-experience" tabindex="56">Experiencia de Navegación</legend>
+                        
                             <div class="form-group">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio"  name="respuesta" id="respuesta" tabindex="7">
-                                    <label class="form-check-label" for="si">Sí</label>
+                                    <label for="navigation-experience" class="form-control-input" tabindex="57" aria-label="¿Cómo calificarías la experiencia de navegación?" required> ¿CÓMO CALIFICARÍAS LA EXPERIENCIA DE NAVEGACIÓN?</label>
+                        
+                                    <label class="form-control-input" tabindex="58" required>
+                                        <input class="form-check-input" type="radio" value="facil" name="dificultad" id="facil" tabindex="59">Facil
+                                    </label>
+                        
+                                    <label class="form-control-input" tabindex="60" required>
+                                        <input class="form-check-input" type="radio" value="media" name="dificultad" id="media" tabindex="61">Media
+                                    </label>
+                        
+                                    <label class="form-control-input" tabindex="62" required>
+                                        <input class="form-check-input" type="radio" value="normal" name="dificultad" id="normal" tabindex="63">Normal
+                                    </label>
+                        
+                                    <label class="form-control-input" tabindex="64" required>
+                                        <input class="form-check-input" type="radio" value="dificil" name="dificultad" id="dificil" tabindex="65">Difícil
+                                    </label>
+                        
+                                    <label class="form-control-input" tabindex="66" required>
+                                        <input class="form-check-input" type="radio" value="muydificil" name="dificultad" id="muyDificil" tabindex="67">Muy difícil
+                                    </label>
                                 </div>
                             </div>
+                        </fieldset>
+                        
+
+                        <fieldset aria-labelledby="barriers-encountered" role="group">
+                            <legend id="barriers-encountered" tabindex="68">Barreras Encontradas en la Navegación</legend>
+                        
+                            <div class="form-group">
+                                <label for="barriers-encountered" class="form-control-input" tabindex="69" aria-label="¿Qué barreras ha encontrado en la navegación?" required>¿QUÉ BARRERAS HA ENCONTRADO EN LA NAVEGACIÓN?</label><br><br>
+                                <input type="text" class="form-control-input" placeholder="Escriba su respuesta" tabindex="70" aria-describedby="barriers-desc">
+                                <div id="barriers-desc" class="visually-hidden" tabindex="71">Por favor, describa las barreras encontradas durante la navegación.</div>
+                            </div>
+                        </fieldset>
+                        
+                        <fieldset aria-labelledby="technology-usage" role="group">
+                            <legend id="technology-usage" tabindex="72">Uso de Tecnología en la Navegación</legend>
+                        
                             <div class="form-group">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio"  name="respuesta" id="respuesta" tabindex="8">
-                                    <label class="form-check-label" for="no">No</label>
+                                    <label for="technology-usage" class="form-control-input" tabindex="73" aria-label="¿Utiliza alguna tecnología en la navegación?" required> ¿UTILIZA ALGUNA TECNOLOGÍA EN LA NAVEGACIÓN?</label>
+                        
+                                    <label class="form-control-input" tabindex="74" required>
+                                        <input class="form-check-input" type="radio" value="si" name="dificultad" id="si" tabindex="75">Si
+                                    </label>
+                        
+                                    <label class="form-control-input" tabindex="76" required>
+                                        <input class="form-check-input" type="radio" value="no" name="dificultad" id="no" tabindex="77">No
+                                    </label>
                                 </div>
                             </div>
+                        </fieldset>
+                        
+                        <fieldset aria-labelledby="additional-comments" role="group">
+                            <legend id="additional-comments" tabindex="78">¿Cual ha sido tu fotografia favorita? y, ¿Qué opinas sobre el coste de la accesibilidad?</legend>
+                        
                             <div class="form-group">
-                                Si respondió "Si" en la pregunta anterior, ¿Cómo fué su experiencia con la tecnología de asistencia del sitio web?
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control-input" placeholder="Escriba su respuesta">
+                                <textarea class="form-control-textarea" placeholder="Comentarios adicionales" tabindex="79" aria-describedby="comments-desc"></textarea>
+                                <div id="comments-desc" class="visually-hidden" tabindex="80">Por favor, proporciona comentarios adicionales si los tienes.</div>
                             </div>
                         </fieldset>
-                        <fieldset>
-                            <div class="form-group">
-                                <textarea class="form-control-textarea" placeholder="Comentarios adicionales" tabindex="9"></textarea>
-                            </div>
-                        </fieldset>
+                        
                         <div class="form-group">
-                            <button type="submit" aria-label="Enviar formulario" class="form-control-submit-button">Enviar</button>
+                            <a class="nav-link active form-control-submit-button" aria-current="page" href="#footer" tabindex="81" aria-label="Ir a la sección de Inicio y enviar el formulario">Enviar y terminar</a>
                         </div>
+                        
                     </form>
                     <!-- end of contact form -->
                 </div> <!-- end of col -->
@@ -373,14 +363,14 @@
     <footer id="footer" class="footer">
         <!-- Fondo de Video -->
         <div class="video-background-container" tabindex="0">
-            <video autoplay loop muted id="video-background" poster="images/header-background.jpg" playsinline>
+            <video autoplay loop muted id="videobackground" poster="images/header-background.jpg" playsinline>
                 <source src="images/header-background-video.mp4" type="video/mp4" />
             </video>
             
             <!-- Contenido de texto sobre el fondo -->
             <div class="text-overlay">
                 <div class="footer-content">
-                    <p>LA UNIDAD ES LA VARIEDAD, Y LA VARIEDAD EN LA UNIDAD ES LA LEY SUPREMA DEL UNIVERSO. Isaac Newton</p>
+                    <p tabindex="82">LA UNIDAD ES LA VARIEDAD, Y LA VARIEDAD EN LA UNIDAD ES LA LEY SUPREMA DEL UNIVERSO. Isaac Newton</p>
                 </div>
             </div>
             <!-- Fin del contenido de texto sobre el fondo -->
@@ -388,7 +378,7 @@
         <!-- Fin del fondo de video -->
     </footer> <!-- Fin de!-- end of footer -->  
     <!-- end of footer -->
-
+            
 
     <!-- Copyright -->
     <div class="copyright">
