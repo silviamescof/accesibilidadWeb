@@ -38,9 +38,9 @@
         <div class="container">
             <!-- Text Logo - Use this if you don't have a graphic logo -->
             <!-- <a class="navbar-brand logo-text" href="index.html">Desi</a> -->
-    
+            <h1 class="text-white fs-3">Accesibilidad Web</h1>
             <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarsExampleDefault">
-                <span class="navbar-toggler-icon"></span>
+                
             </button>
     
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
@@ -60,12 +60,7 @@
                 </ul>
                 
                 <div class="nav-item social-icons">
-                    <a href="#your-facebook-link" class="social-icon" aria-label="Enlace a Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#your-twitter-link" class="social-icon" aria-label="Enlace a Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
+                    
                 </div>
             </div> <!-- end of navbar-collapse -->
         </div> <!-- end of container -->
@@ -252,7 +247,7 @@
                         
                             <div class="form-group">
                                 <div class="form-check form-check-inline">
-                                    <label for="disability-type" class="form-control-input" tabindex="45" aria-label="Tipo de Discapacidad" required> TIPO DE DISCAPACIDAD</label>
+                                    <legend for="disability-type" class="form-control-input" tabindex="45" aria-label="Tipo de Discapacidad" required> TIPO DE DISCAPACIDAD</legend>
                         
                                     <label class="form-control-input" tabindex="46" required>
                                         <input class="form-check-input" type="radio" value="facil" name="dificultad" id="Auditiva" tabindex="47">Auditiva
@@ -283,7 +278,7 @@
                         
                             <div class="form-group">
                                 <div class="form-check form-check-inline">
-                                    <label for="navigation-experience" class="form-control-input" tabindex="57" aria-label="¿Cómo calificarías la experiencia de navegación?" required> ¿CÓMO CALIFICARÍAS LA EXPERIENCIA DE NAVEGACIÓN?</label>
+                                    <legend for="navigation-experience" class="form-control-input" tabindex="57" aria-label="¿Cómo calificarías la experiencia de navegación?" required> ¿CÓMO CALIFICARÍAS LA EXPERIENCIA DE NAVEGACIÓN?</legend>
                         
                                     <label class="form-control-input" tabindex="58" required>
                                         <input class="form-check-input" type="radio" value="facil" name="dificultad" id="facil" tabindex="59">Facil
@@ -313,8 +308,8 @@
                             <legend id="barriers-encountered" tabindex="68">Barreras Encontradas en la Navegación</legend>
                         
                             <div class="form-group">
-                                <label for="barriers-encountered" class="form-control-input" tabindex="69" aria-label="¿Qué barreras ha encontrado en la navegación?" required>¿QUÉ BARRERAS HA ENCONTRADO EN LA NAVEGACIÓN?</label><br><br>
-                                <input type="text" class="form-control-input" placeholder="Escriba su respuesta" tabindex="70" aria-describedby="barriers-desc">
+                                <label for="respuesta" class="form-control-input" tabindex="69" aria-label="¿Qué barreras ha encontrado en la navegación?" required>¿QUÉ BARRERAS HA ENCONTRADO EN LA NAVEGACIÓN?</label><br><br>
+                                <input type="text" name="respuesta" class="form-control-input" placeholder="Escriba su respuesta" tabindex="70" aria-describedby="barriers-desc">
                                 <div id="barriers-desc" class="visually-hidden" tabindex="71">Por favor, describa las barreras encontradas durante la navegación.</div>
                             </div>
                         </fieldset>
@@ -324,7 +319,7 @@
                         
                             <div class="form-group">
                                 <div class="form-check form-check-inline">
-                                    <label for="technology-usage" class="form-control-input" tabindex="73" aria-label="¿Utiliza alguna tecnología en la navegación?" required> ¿UTILIZA ALGUNA TECNOLOGÍA EN LA NAVEGACIÓN?</label>
+                                    <legend for="technology-usage" class="form-control-input" tabindex="73" aria-label="¿Utiliza alguna tecnología en la navegación?" required> ¿UTILIZA ALGUNA TECNOLOGÍA EN LA NAVEGACIÓN?</legend>
                         
                                     <label class="form-control-input" tabindex="74" required>
                                         <input class="form-check-input" type="radio" value="si" name="dificultad" id="si" tabindex="75">Si
@@ -347,7 +342,7 @@
                         </fieldset>
                         
                         <div class="form-group">
-                            <a class="nav-link active form-control-submit-button" aria-current="page" href="#footer" tabindex="81" aria-label="Ir a la sección de Inicio y enviar el formulario">Enviar y terminar</a>
+                            <a class="nav-link active btn-success text-center fs-4" aria-current="page" href="#footer" tabindex="81" aria-label="Ir a la sección de Inicio y enviar el formulario">Enviar y terminar</a>
                         </div>
                         
                     </form>
@@ -378,7 +373,7 @@
         <!-- Fin del fondo de video -->
     </footer> <!-- Fin de!-- end of footer -->  
     <!-- end of footer -->
-            
+
 
     <!-- Copyright -->
     <div class="copyright">
