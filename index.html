@@ -34,6 +34,8 @@
 <body>
     
     <!-- Navigation -->
+
+
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
         <div class="container">
             <!-- Text Logo - Use this if you don't have a graphic logo -->
@@ -46,16 +48,16 @@
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ms-auto navbar-nav-scroll">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#header" tabindex="1" aria-label="Ir a la sección de Inicio">Inicio</a>
+                        <a class="nav-link active" href="#header" tabindex="0" aria-label="Ir a la sección de Inicio">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#galeria" tabindex="2" aria-label="Ir a la Galería de imágenes">Galería de imágenes</a>
+                        <a class="nav-link" href="#galeria" tabindex="0" aria-label="Ir a la Galería de imágenes">Galería de imágenes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#tabla" tabindex="3" aria-label="Ir a la sección de Tablas accesibles">Tablas accesibles</a>
+                        <a class="nav-link" href="#tabla" tabindex="0" aria-label="Ir a la sección de Tablas accesibles">Tablas accesibles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact" tabindex="4" aria-label="Ir a la sección de Formulario">Formulario</a>
+                        <a class="nav-link" href="#contact" tabindex="0" aria-label="Ir a la sección de Formulario">Formulario</a>
                     </li>
                 </ul>
                 
@@ -74,14 +76,14 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="video-container">
-                        <video width="1100" height="800" autoplay preload="auto" controls id="header-video" tabindex="5" aria-label="Video de presentación con subtítulos, pulsa enter para reproducir">
+                        <video width="1100" height="800" autoplay preload="auto" controls id="header-video" tabindex="0" aria-label="Video de presentación con subtítulos, pulsa enter para reproducir">
                             <track kind="captions" label="Español" src="ruta/subtitulos.vtt" srclang="es" default>
                             <source src="./assets/talking-avatar_qnAFK4YC.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <a class="btn-solid-lg" href="#galeria" tabindex="6" aria-label="Descubrir más sobre la introducción">Descubrir</a>
+                    <a class="btn-solid-lg" href="#galeria" tabindex="0" aria-label="Descubrir más sobre la introducción">Descubrir</a>
                 </div>
                 <!-- Fin de la columna -->
             </div> <!-- Fin de la fila -->
@@ -89,7 +91,7 @@
     </div> <!-- Fin del contenido del encabezado -->
 
     <!-- Fondo de Video -->
-    <div class="video-background-container" tabindex="7">
+    <div class="video-background-container" tabindex="0">
         <video autoplay loop muted id="video-background" poster="images/header-background.jpg" playsinline>
             <source src="images/header-background-video.mp4" type="video/mp4" />
         </video>
@@ -108,7 +110,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2 id="galeria-heading">1: Percepción de imágenes</h2>
-                    <p tabindex="8"><strong>Esta primera experiencia consiste en que puedas navegar por nuestra galería de imágenes y elijas cuál de ellas es tu fotografía favorita. Más tarde preguntaremos por tus gustos.</strong></p>
+                    <p tabindex="0"><strong>Esta primera experiencia consiste en que puedas navegar por nuestra galería de imágenes y elijas cuál de ellas es tu fotografía favorita. Más tarde preguntaremos por tus gustos.</strong></p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
@@ -116,7 +118,7 @@
                     <!-- Filter -->
                     <p>Selecciona una categoría:</p>
                     <div class="button-group filters-button-group">
-                        <button class="button is-checked" data-filter="*" tabindex="9"><span>Todas</span></button>
+                        <button class="button is-checked" data-filter="*" tabindex="0"><span>Todas</span></button>
                         <button class="button" data-filter=".daltonismo" tabindex="10"><span>DALTONISMO</span></button>
                         <button class="button" data-filter=".auditivas" tabindex="11"><span>DIFICULTADES AUDITIVAS</span></button>
                         <button class="button" data-filter=".neurologicas" tabindex="12"><span>DIFICULTADES NEUROLOGICAS Y MOTRICES</span></button>
@@ -241,10 +243,54 @@
                                 <div id="email-desc" class="visually-hidden" tabindex="43">Por favor, ingresa tu dirección de correo electrónico.</div>
                             </div>
                         </fieldset>
+
                         
                         <fieldset aria-labelledby="disability-type" role="group">
                             <legend id="disability-type" tabindex="44">Tipo de Discapacidad</legend>
+                        </fieldset>
                         
+
+                        <fieldset>
+                            <div class="form-group">
+                                <label  class="form-control-input mb-4"  placeholder="Tipo de discapacidad" tabindex="1" required> Tipo de discapacidad</label>
+                                <div class="form-group">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox"  name="visual" id="visual" tabindex="3">
+                                        <label class="form-check-label" for="visual">Visual</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox"  name="auditiva" id="auditiva">
+                                        <label class="form-check-label" for="auditiva">Auditiva</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox"  name="motriz" id="motriz">
+                                        <label class="form-check-label" for="motriz">Motriz</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox"  name="cognitiva" id="cognitiva">
+                                        <label class="form-check-label" for="cognitiva">Cognitiva</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox"  name="otra" id="otra">
+                                        <label class="form-check-label" for="otra">Otra</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-group">
+                                <label  class="form-control-input"  placeholder="Tipo de discapacidad" tabindex="1" required> ¿Cómo calificaría su experiencia de navegación?</label>
+                            </div>
+
                             <div class="form-group">
                                 <div class="form-check form-check-inline">
                                     <legend for="disability-type" class="form-control-input" tabindex="45" aria-label="Tipo de Discapacidad" required> TIPO DE DISCAPACIDAD</legend>
